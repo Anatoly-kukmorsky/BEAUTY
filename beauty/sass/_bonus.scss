@@ -1,0 +1,106 @@
+.bonus--item {
+    padding: 35px 45px 35px 40px;
+    flex: 1;
+    color: #fff;
+    background: #66c05d;
+
+    &.email {
+        min-width: 500px;
+        max-width: 600px;
+        gap: 30px;
+
+        & .bonus-info {
+            max-width: 250px;
+            min-width: 250px;
+            
+        }
+    }
+
+    &.store-map {
+        min-width: 300px;
+        max-width: 600px;
+    }
+
+    & .block-button {
+        padding: 9px 28px 9px 29px;
+        border-color: #fff;
+
+        &:focus, &:hover {
+            box-shadow: 0 0 3px 1px #fff;
+        }
+    }
+}
+
+.bonus-info {
+    row-gap: 25px;
+}
+
+.info-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px; 
+}
+
+.label-email {
+    width: 225px;
+    display: block;
+    background: #FFFFFF;
+    border-radius: 30px;
+    border: 1px solid #66c05d;
+    padding: 9px 25px;
+    color: #333;
+    transition: 0.2s;
+
+    &:focus-within {
+        box-shadow: 0 0 5px 2px #fff;
+    }
+
+    & input::placeholder {
+        color: #C4C4C4;
+    }  
+}
+
+.submit-email  {
+    position: relative;
+    min-width: 140px;
+
+    & span {
+        position: absolute;
+        display: inline-block;
+        top: -20px;
+        left: 0;
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    &:hover span, &:focus span {
+        opacity: 1;
+    }
+
+    & svg {
+        fill-opacity: 0.4;
+        transition: 0.2s;
+    }
+
+    &:hover svg, &:focus svg {
+        fill-opacity: 0.9;
+    }
+}
+
+@media screen and (max-width: 538px) {
+
+    .bonus--item {
+        align-items: center;
+        text-align: center;
+    }
+
+    .bonus--item.email {
+        flex-direction: column;
+        align-items: center;
+        min-width: 300px;
+    }
+
+    .bonus--item.store-map .bonus-info {
+        align-items: center;
+    }
+}

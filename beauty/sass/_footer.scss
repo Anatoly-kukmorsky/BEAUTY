@@ -1,0 +1,60 @@
+.footer-info {
+    padding: 37px 0;
+    background: #fff;
+}
+
+.footer-info--box {
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+.soc_link {
+    color: #66C05D;
+    transition: all 0.2s ease-in-out;
+
+    &:focus svg, &:hover svg {
+        color: #333;
+        transform: scale(1.1);
+    }
+
+
+}
+
+.footer-address {
+    gap: 40px;
+    flex-wrap: wrap;
+
+    & .block-tel {    
+        flex-wrap: wrap;
+    }
+}
+
+
+.footer-policy {
+    padding: 25px 0;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #828282;
+    & a {
+        color: inherit;
+    }
+}
+
+@media screen and (max-width: 838px) {
+    .footer-policy {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 658px) {
+
+    .footer-info--box {
+        flex-direction: column;
+    }
+
+
+}

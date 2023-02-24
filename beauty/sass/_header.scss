@@ -1,0 +1,63 @@
+.header {
+    display: block;
+    height: auto; 
+    color: #fff;
+    background: #66C05D;
+}
+
+.header-wrapper {
+    gap: 30px;
+}
+
+.header-box {
+    max-width: 310px;
+    min-width: 310px;
+    row-gap: 50px;
+
+    & .block-button {
+        border-color: #fff;
+    
+        &:focus, &:hover {
+            box-shadow: 0 0 3px 1px #fff;
+
+        }
+    }   
+    
+}
+
+.main-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.167;
+}
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        margin-top: 50px;
+        padding: 30px 0;
+    }
+
+    .main-title {
+        font-size: 45px;
+    }
+
+    .header-box {
+        row-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    .header-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .main-title {
+        font-size: 38px;
+    }
+
+    .header-box {
+        row-gap: 25px;
+    }
+}

@@ -1,0 +1,190 @@
+
+// nav-desctop start
+.top--line_menu {
+    height: 50px;
+    column-gap: 15px;
+}
+
+.nav-second--line {
+    color: #000;
+    background: #fff;
+}
+
+.second--line_logo--tel {
+    padding: 20px 0;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.tel {
+    line-height: 1.1875;
+    color: inherit;
+}
+
+.second--line_menu--row {
+    height: 70px;
+    gap: 20px;
+
+    & .block-link{
+        font-size: 16px;
+        line-height: 1.1875;
+    }
+    
+}
+// nav-desctop end
+
+
+// nav-mobail start
+.nav-mobail {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: none;
+    color: #333;
+    padding: 0 15px;
+    z-index: 10;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 1;
+    }
+
+    & .nav-mobail--block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        z-index: 2;
+    }
+
+    & .nav-mobail--menu {
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+        padding: 30px 15px 100px;
+        row-gap: 40px;
+        font-size: 16px;
+        background: #fff;
+        transition: all 0.5s ease;
+        overflow-x: scroll;
+
+        &.active {
+            left: 0;
+        }
+    }
+}
+
+.menu-burger {
+    position: relative;
+    width: 34px;
+    height: 24px;
+
+    &:before,
+    &:after,
+    & span {
+        position: absolute;
+        content: '';
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #333333c5;
+        border-radius: 3px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:before {
+        top: 0;
+    }
+
+    &:after {
+        bottom: 0;
+    }
+
+    & span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &.active::before {
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    &.active::after {
+        transform: rotate(-45deg);
+        bottom: 10px;
+    }
+
+    &.active span {
+        transform: scale(0);
+    }
+}
+
+.mobail--menu_site-sections,
+.mobail--menu_product-sections,
+.mobail--menu_contact-us {
+    width: 100%;
+    row-gap: 30px;
+}
+
+.mobail--menu_contact-us .block-button {
+    border-color: #66C05D;
+}
+
+.menu-column {
+    width: 100%;
+    row-gap: 15px;
+}
+
+.menu_left--column .block-button{
+    border-color: #66C05D;
+}
+
+.menu-accordion {
+    width: 100%;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: -7px;
+        width: 100%;
+        height: 1px;
+        background: #66C05D;
+    }     
+}
+
+.menu-mobail--link {
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+.menu-soc_links {
+    column-gap: 20px;
+}
+// nav-mobail end
+
+
+@media screen and (max-width: 768px) {
+    
+    .nav-desctop {
+        display: none; 
+    }
+
+    .nav-mobail {
+        display: block;
+    }
+  
+}

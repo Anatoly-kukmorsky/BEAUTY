@@ -1,0 +1,55 @@
+.special-offers--top {
+    padding-right: 4.08%;
+}
+
+.special-title {
+    margin-bottom: 39px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.167;
+    color: #000000;
+}
+
+.special-offers--item {
+    flex: 1;
+    min-width: 245px;
+    max-width: 400px;
+    padding: 26.5px 30px;
+    row-gap: 20.5px;
+    text-align: center;
+    background: #fff;
+
+    & p {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 1.19;
+        letter-spacing: 0.05em;
+        color: #000;
+    }
+
+    & .block-button {
+        padding: 9.2px 40px 9.2px 39px;
+        border-radius: 30px;
+        background: #66c05d;
+        border-color: #66c05d;
+        color: #fff;
+    
+        &:focus, &:hover {
+            border-color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 668px) {
+    .special-title {
+        font-size: 21px;
+    }
+
+    .special-offers--top {
+        padding-right: 0;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+}
